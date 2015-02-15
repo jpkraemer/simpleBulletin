@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="editModal" class="reveal-modal" data-reveal>
+      <h5>Post:</h5>
+      <form method="post">
+        <div class="row">
+          <div class="large-4 medium-4 columns">
+            <label>Name</label>
+            <p></p>
+          </div>
+          <div class="large-4 medium-4 columns">
+            <label>Email (to confirm your identity)</label>
+            <input type="text" placeholder="Your email" name="newPost[email]"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Your Post</label>
+            <textarea name="newPost[content]"></textarea>
+          </div>
+        </div>
+        <input type="hidden" name="newPost[id]" value="" />
+        <input type="submit" class="tiny button"/>
+        <a class="close-reveal-modal">&#215;</a>
+      </form>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Welcome to i10 Bulletin</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        {{#posts}}
+          <div class="panel post" data-id="{{id}}">
+            <div class="row">
+              <h3>{{username}}</h3>
+            </div>
+            <div class="row">
+              <h4><small>{{time}}
+              <a href="" data-reveal-id="editModal">Edit</a></small></h4>
+            </div>
+            <div class="row">
+              <p>{{content}}</p>
+            </div>
+          </div>
+        {{/posts}}
+      </div>
+    </div>
+      
+    <div class="row">
+      <h5>Post:</h5>
+      <form method="post">
+        <div class="row">
+          <div class="large-4 medium-4 columns">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" name="newPost[username]" />
+          </div>
+          <div class="large-4 medium-4 columns">
+            <label>Email</label>
+            <input type="text" placeholder="Your email" name="newPost[email]"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Your Post</label>
+            <textarea name="newPost[content]"></textarea>
+          </div>
+        </div>
+
+        <input type="submit" class="tiny button"/>
+      </form>
+    </div>     
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

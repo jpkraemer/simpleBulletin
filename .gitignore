@@ -1,0 +1,8 @@
+.sass-cache/*
+bower_components/*
+posts
+js/min
+min
+node_modules
+Gemfile.lock
+npm-debug.log
