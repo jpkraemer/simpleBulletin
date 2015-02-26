@@ -1,0 +1,28 @@
+{
+  "name": "BulletinBoard",
+  "version": "1.0.0",
+  "description": "A simple bulletin board",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.12.0",
+    "mongoose": "^3.8.24",
+    "moment": "^2.9.0",
+    "mustache": "^1.1.0",
+    "tungus": "^0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpkraemer/simpleBulletin.git"
+  },
+  "author": "Jan-Peter Krämer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpkraemer/simpleBulletin/issues"
+  },
+  "homepage": "https://github.com/jpkraemer/simpleBulletin"
+}
