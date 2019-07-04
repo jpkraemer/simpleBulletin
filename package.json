@@ -9,11 +9,14 @@
     "mongoose": "^3.8.24",
     "moment": "^2.9.0",
     "mustache": "^1.1.0",
-    "tungus": "^0.0.4"
+    "tungus": "^0.0.4",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/jpkraemer/simpleBulletin/issues"
   },
-  "homepage": "https://github.com/jpkraemer/simpleBulletin"
+  "homepage": "https://github.com/jpkraemer/simpleBulletin",
+  "snyk": true
 }
